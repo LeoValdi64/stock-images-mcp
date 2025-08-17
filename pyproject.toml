@@ -1,75 +1,23 @@
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "stock-images-mcp"
 version = "1.0.0"
 description = "MCP Server for searching and downloading stock images from multiple platforms"
+authors = ["Zulelee"]
 readme = "README.md"
-license = {text = "MIT"}
-authors = [
-    {name = "Stock Images MCP Team", email = "team@example.com"}
-]
-maintainers = [
-    {name = "Stock Images MCP Team", email = "team@example.com"}
-]
-keywords = ["mcp", "stock-images", "pexels", "unsplash", "pixabay", "api"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
-    "Topic :: Multimedia :: Graphics",
-]
-requires-python = ">=3.8"
-dependencies = [
-    "mcp[cli]>=1.13.0",
-    "requests>=2.32.0",
-    "python-dotenv>=1.1.0",
-]
+packages = [{include = "server.py"}]
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0",
-    "black>=23.0.0",
-    "isort>=5.12.0",
-    "flake8>=6.0.0",
-    "mypy>=1.0.0",
-]
-test = [
-    "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0",
-    "pytest-cov>=4.0.0",
-]
+[tool.poetry.dependencies]
+python = "^3.12"
+mcp = "1.13.0"
+requests = "2.32.4"
+python-dotenv = "1.1.1"
 
-[project.urls]
-Homepage = "https://github.com/yourusername/stock-images-mcp"
-Documentation = "https://github.com/yourusername/stock-images-mcp#readme"
-Repository = "https://github.com/yourusername/stock-images-mcp.git"
-Issues = "https://github.com/yourusername/stock-images-mcp/issues"
-Changelog = "https://github.com/yourusername/stock-images-mcp/blob/main/CHANGELOG.md"
-
-[project.scripts]
+[tool.poetry.scripts]
 stock-images-mcp = "server:main"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["*"]
-exclude = ["tests*", "venv*", ".git*"]
-
-[tool.setuptools.package-data]
-"*" = ["*.md", "*.txt", "*.example"]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 88
