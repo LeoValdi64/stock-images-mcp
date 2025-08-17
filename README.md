@@ -24,32 +24,35 @@ Add this configuration to your `~/.cursor/mcp.json` file:
 }
 ```
 
-### Step 2: Get API Keys (Optional but Recommended)
+### Step 2: Get API Keys (Atleast one of the API keys are required)
 
 **Unsplash:**
+
 1. Go to https://unsplash.com/developers
 2. Make sure you are logged in
 3. Create an app
 4. Get your API key from the app dashboard
 
 **Pexels:**
+
 1. Go to https://www.pexels.com/api/
 2. Make sure you are logged in
 3. Click "Your API Key" button
 4. Copy your API key
 
 **Pixabay:**
+
 1. Go to https://pixabay.com/api/docs/
 2. Make sure you are logged in
 3. Find your API key under "Parameters" in the docs
 
-### Step 3: Restart Cursor
+### Step 3: Activate the Tool in Cursor Settings
 
-After adding the configuration, restart Cursor to load the new MCP server.
+Switch on the toggle for stock-images-mcp in cursor settings
 
 ### Step 4: Use the Tools
 
-Once Cursor restarts, you can use the stock images tools directly in your conversations:
+Once the tool connects, you can use the stock images tools directly in your conversations:
 
 - Search for images: "Find tech workspace images"
 - Download images: "Download 5 nature photos"
@@ -58,11 +61,9 @@ Once Cursor restarts, you can use the stock images tools directly in your conver
 ## Available Tools
 
 - **`search_stock_images`**: Search across Pexels, Unsplash, and Pixabay
-- **`download_stock_image`**: Download a specific image by URL
-- **`search_and_download_images`**: Search and automatically download images
 
 ## Supported Platforms
 
 - **Pexels**: High-quality free stock photos
-- **Unsplash**: Beautiful free images and photos  
+- **Unsplash**: Beautiful free images and photos
 - **Pixabay**: Stunning free images and royalty free stock photos
