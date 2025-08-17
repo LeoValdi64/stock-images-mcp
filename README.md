@@ -24,7 +24,7 @@ Add this configuration to your `~/.cursor/mcp.json` file:
 }
 ```
 
-### Step 2: Get API Keys (Atleast one of the API keys are required)
+### Step 2: Get API Keys (Atleast one of the API keys is required)
 
 **Unsplash:**
 
