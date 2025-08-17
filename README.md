@@ -16,7 +16,49 @@ A Model Context Protocol (MCP) server for searching and downloading stock images
 - **Unsplash**: Beautiful free images and photos
 - **Pixabay**: Stunning free images and royalty free stock photos
 
-## Installation
+## 🚀 Quick Setup for Cursor
+
+### Step 1: Add to Cursor's MCP Configuration
+
+Add this configuration to your `~/.cursor/mcp.json` file:
+
+```json
+{
+  "mcpServers": {
+    "stock-images-mcp": {
+      "command": "uvx",
+      "args": ["git+https://github.com/Zulelee/stock-images-mcp"],
+      "env": {
+        "UNSPLASH_API_KEY": "your_unsplash_api_key_here",
+        "PEXELS_API_KEY": "your_pexels_api_key_here",
+        "PIXABAY_API_KEY": "your_pixabay_api_key_here"
+      }
+    }
+  }
+}
+```
+
+### Step 2: Get API Keys (Optional but Recommended)
+
+For better results and higher rate limits, get free API keys from:
+
+- **Unsplash**: https://unsplash.com/developers
+- **Pexels**: https://www.pexels.com/api/
+- **Pixabay**: https://pixabay.com/api/docs/
+
+### Step 3: Restart Cursor
+
+After adding the configuration, restart Cursor to load the new MCP server.
+
+### Step 4: Test the Integration
+
+Once Cursor restarts, you can use the stock images tools directly in your conversations:
+
+- Search for images: "Find tech workspace images"
+- Download images: "Download 5 nature photos"
+- Search specific platforms: "Search Unsplash for coding setup images"
+
+## 🛠️ Local Development Setup
 
 1. **Clone or download this repository**
 
