@@ -32,6 +32,17 @@ wheels/
 *.egg
 MANIFEST
 
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
 # PyInstaller
 *.manifest
 *.spec
