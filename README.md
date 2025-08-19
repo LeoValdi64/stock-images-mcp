@@ -2,6 +2,32 @@
 
 A Model Context Protocol (MCP) server for searching and downloading stock images from multiple platforms. Built for personal use with Cursor and shared with the community.
 
+## Prerequisites
+
+Before setting up this MCP server, you need to install `uv`, a fast Python package installer and resolver:
+
+### Install uv
+
+**macOS/Linux:**
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows:**
+
+```powershell
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+**Alternative (using pip):**
+
+```bash
+pip install uv
+```
+
+The `uvx` command used in the MCP configuration requires `uv` to be installed on your system.
+
 ## 🚀 Quick Setup for Cursor
 
 ### Step 1: Add to Cursor's MCP Configuration
@@ -61,9 +87,3 @@ Once the tool connects, you can use the stock images tools directly in your conv
 ## Available Tools
 
 - **`search_stock_images`**: Search across Pexels, Unsplash, and Pixabay
-
-## Supported Platforms
-
-- **Pexels**: High-quality free stock photos
-- **Unsplash**: Beautiful free images and photos
-- **Pixabay**: Stunning free images and royalty free stock photos
