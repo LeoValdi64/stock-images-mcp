@@ -39,7 +39,7 @@ Add this configuration to your `~/.cursor/mcp.json` file:
   "mcpServers": {
     "stock-images-mcp": {
       "command": "uvx",
-      "args": ["git+https://github.com/Zulelee/stock-images-mcp"],
+      "args": ["git+https://github.com/LeoValdi64/stock-images-mcp"],
       "env": {
         "PEXELS_API_KEY": "your_pexels_api_key_here",
         "PIXABAY_API_KEY": "your_pixabay_api_key_here"
